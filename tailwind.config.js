@@ -1,5 +1,5 @@
 module.exports = {
-  purge: ['./pages/**/*.tsx', './components/**/*.tsx'],
+  purge: ['./pages/**/*.jsx', './components/**/*.jsx'],
   theme: {
     extend: {
       minHeight: {

@@ -1,0 +1,555 @@
+{
+  "site": {
+    "sampleSize": 0,
+    "intents": [
+      {
+        "id": "contentfulAppDescription",
+        "signals": [
+          {
+            "type": "QS",
+            "freq": "visit",
+            "scope": "visitor",
+            "str": 100,
+            "value": {
+              "cs": false,
+              "expr": "cfapp",
+              "type": "exact"
+            },
+            "parameter": "utm_source"
+          }
+        ]
+      },
+      {
+        "id": "fromAltolaSite",
+        "signals": [
+          {
+            "type": "QS",
+            "freq": "visit",
+            "scope": "visit",
+            "str": 75,
+            "value": {
+              "cs": false,
+              "expr": "altola",
+              "type": "exact"
+            },
+            "parameter": "utm_source"
+          },
+          {
+            "type": "PVW",
+            "freq": "visit",
+            "scope": "visit",
+            "str": 0,
+            "max": 1000,
+            "min": 2
+          }
+        ]
+      },
+      {
+        "id": "fromSitelifySite",
+        "signals": [
+          {
+            "type": "PVW",
+            "freq": "visit",
+            "scope": "visit",
+            "str": 0,
+            "min": 2
+          },
+          {
+            "type": "QS",
+            "freq": "visit",
+            "scope": "visitor",
+            "str": 75,
+            "value": {
+              "cs": false,
+              "expr": "sitelify",
+              "type": "exact"
+            },
+            "parameter": "utm_source"
+          }
+        ]
+      },
+      {
+        "id": "machathon",
+        "signals": [
+          {
+            "type": "BEH",
+            "freq": "always",
+            "scope": "visitor",
+            "str": 100
+          },
+          {
+            "type": "QS",
+            "freq": "visit",
+            "scope": "visitor",
+            "str": 50,
+            "value": {
+              "cs": false,
+              "expr": "machathon",
+              "type": "exact"
+            },
+            "parameter": "utm_campaign"
+          }
+        ]
+      },
+      {
+        "id": "sitecoreProduct",
+        "signals": [
+          {
+            "type": "QS",
+            "freq": "visit",
+            "scope": "visitor",
+            "str": -100,
+            "value": {
+              "cs": false,
+              "expr": "sitecore",
+              "type": "notexact"
+            },
+            "parameter": "product"
+          },
+          {
+            "type": "QS",
+            "freq": "visit",
+            "scope": "visitor",
+            "str": 25,
+            "value": {
+              "cs": false,
+              "expr": "sitecore",
+              "type": "exact"
+            },
+            "parameter": "utm_campaign"
+          },
+          {
+            "type": "QS",
+            "freq": "always",
+            "scope": "visitor",
+            "str": 100,
+            "value": {
+              "cs": false,
+              "expr": "sitecore",
+              "type": "exact"
+            },
+            "parameter": "product"
+          },
+          {
+            "type": "BEH",
+            "freq": "always",
+            "scope": "visitor",
+            "str": 25
+          }
+        ]
+      },
+      {
+        "id": "contentfulProduct",
+        "signals": [
+          {
+            "type": "QS",
+            "freq": "visit",
+            "scope": "visitor",
+            "str": -100,
+            "value": {
+              "cs": false,
+              "expr": "contentful",
+              "type": "notexact"
+            },
+            "parameter": "product"
+          },
+          {
+            "type": "QS",
+            "freq": "always",
+            "scope": "visitor",
+            "str": 100,
+            "value": {
+              "cs": false,
+              "expr": "contentful",
+              "type": "exact"
+            },
+            "parameter": "product"
+          },
+          {
+            "type": "BEH",
+            "freq": "always",
+            "scope": "visitor",
+            "str": 25
+          }
+        ]
+      },
+      {
+        "id": "contentstackProduct",
+        "signals": [
+          {
+            "type": "QS",
+            "freq": "visit",
+            "scope": "visitor",
+            "str": -100,
+            "value": {
+              "cs": false,
+              "expr": "contentstack",
+              "type": "notexact"
+            },
+            "parameter": "product"
+          },
+          {
+            "type": "QS",
+            "freq": "always",
+            "scope": "visitor",
+            "str": 100,
+            "value": {
+              "cs": false,
+              "expr": "contentstack",
+              "type": "exact"
+            },
+            "parameter": "product"
+          },
+          {
+            "type": "BEH",
+            "freq": "always",
+            "scope": "visitor",
+            "str": 25
+          },
+          {
+            "type": "QS",
+            "freq": "visit",
+            "scope": "visitor",
+            "str": 25,
+            "value": {
+              "cs": false,
+              "expr": "contentstack",
+              "type": "exact"
+            },
+            "parameter": "utm_source"
+          },
+          {
+            "type": "QS",
+            "freq": "visit",
+            "scope": "visitor",
+            "str": 25,
+            "value": {
+              "cs": false,
+              "expr": "contentstack",
+              "type": "exact"
+            },
+            "parameter": "utm_campaign"
+          }
+        ]
+      },
+      {
+        "id": "sanityProduct",
+        "signals": [
+          {
+            "type": "QS",
+            "freq": "visit",
+            "scope": "visitor",
+            "str": -100,
+            "value": {
+              "cs": false,
+              "expr": "sanity",
+              "type": "notexact"
+            },
+            "parameter": "product"
+          },
+          {
+            "type": "QS",
+            "freq": "always",
+            "scope": "visitor",
+            "str": 100,
+            "value": {
+              "cs": false,
+              "expr": "sanity",
+              "type": "exact"
+            },
+            "parameter": "product"
+          },
+          {
+            "type": "BEH",
+            "freq": "always",
+            "scope": "visitor",
+            "str": 25
+          }
+        ]
+      },
+      {
+        "id": "kontentProduct",
+        "signals": [
+          {
+            "type": "QS",
+            "freq": "visit",
+            "scope": "visitor",
+            "str": -100,
+            "value": {
+              "cs": false,
+              "expr": "kontent",
+              "type": "notexact"
+            },
+            "parameter": "product"
+          },
+          {
+            "type": "QS",
+            "freq": "visit",
+            "scope": "visitor",
+            "str": 100,
+            "value": {
+              "cs": false,
+              "expr": "kontent",
+              "type": "exact"
+            },
+            "parameter": "product"
+          },
+          {
+            "type": "BEH",
+            "freq": "always",
+            "scope": "visitor",
+            "str": 25
+          }
+        ]
+      },
+      {
+        "id": "cms-contentful",
+        "signals": [
+          {
+            "type": "QS",
+            "freq": "visit",
+            "scope": "visitor",
+            "str": -100,
+            "value": {
+              "cs": false,
+              "expr": "contentful",
+              "type": "notexact"
+            },
+            "parameter": "product"
+          },
+          {
+            "type": "QS",
+            "freq": "visit",
+            "scope": "visitor",
+            "str": 100,
+            "value": {
+              "cs": false,
+              "expr": "contentful",
+              "type": "exact"
+            },
+            "parameter": "product"
+          },
+          {
+            "type": "BEH",
+            "freq": "always",
+            "scope": "visitor",
+            "str": 25
+          }
+        ]
+      },
+      {
+        "id": "cms-sanity",
+        "signals": [
+          {
+            "type": "QS",
+            "freq": "visit",
+            "scope": "visitor",
+            "str": -100,
+            "value": {
+              "cs": false,
+              "expr": "sanity",
+              "type": "notexact"
+            },
+            "parameter": "product"
+          },
+          {
+            "type": "QS",
+            "freq": "visit",
+            "scope": "visitor",
+            "str": 100,
+            "value": {
+              "cs": false,
+              "expr": "sanity",
+              "type": "exact"
+            },
+            "parameter": "product"
+          },
+          {
+            "type": "BEH",
+            "freq": "always",
+            "scope": "visitor",
+            "str": 25
+          }
+        ]
+      },
+      {
+        "id": "cms-contentstack",
+        "signals": [
+          {
+            "type": "QS",
+            "freq": "visit",
+            "scope": "visitor",
+            "str": 25,
+            "value": {
+              "cs": false,
+              "expr": "contentstack",
+              "type": "exact"
+            },
+            "parameter": "utm_source"
+          },
+          {
+            "type": "QS",
+            "freq": "visit",
+            "scope": "visitor",
+            "str": 25,
+            "value": {
+              "cs": false,
+              "expr": "contentstack",
+              "type": "exact"
+            },
+            "parameter": "utm_campaign"
+          },
+          {
+            "type": "QS",
+            "freq": "visit",
+            "scope": "visitor",
+            "str": -100,
+            "value": {
+              "cs": false,
+              "expr": "contentstack",
+              "type": "notexact"
+            },
+            "parameter": "product"
+          },
+          {
+            "type": "QS",
+            "freq": "visit",
+            "scope": "visitor",
+            "str": 100,
+            "value": {
+              "cs": false,
+              "expr": "contentstack",
+              "type": "exact"
+            },
+            "parameter": "product"
+          },
+          {
+            "type": "BEH",
+            "freq": "always",
+            "scope": "visitor",
+            "str": 25
+          }
+        ]
+      },
+      {
+        "id": "cms-sitecore",
+        "signals": [
+          {
+            "type": "QS",
+            "freq": "visit",
+            "scope": "visitor",
+            "str": 25,
+            "value": {
+              "cs": false,
+              "expr": "sitecore",
+              "type": "exact"
+            },
+            "parameter": "utm_campaign"
+          },
+          {
+            "type": "QS",
+            "freq": "visit",
+            "scope": "visitor",
+            "str": -100,
+            "value": {
+              "cs": false,
+              "expr": "sitecore",
+              "type": "notexact"
+            },
+            "parameter": "product"
+          },
+          {
+            "type": "QS",
+            "freq": "visit",
+            "scope": "visitor",
+            "str": 100,
+            "value": {
+              "cs": false,
+              "expr": "sitecore",
+              "type": "exact"
+            },
+            "parameter": "product"
+          },
+          {
+            "type": "BEH",
+            "freq": "always",
+            "scope": "visitor",
+            "str": 25
+          }
+        ]
+      },
+      {
+        "id": "cms-salesforce",
+        "signals": [
+          {
+            "type": "QS",
+            "freq": "visit",
+            "scope": "visitor",
+            "str": -100,
+            "value": {
+              "cs": false,
+              "expr": "salesforce",
+              "type": "notexact"
+            },
+            "parameter": "product"
+          },
+          {
+            "type": "QS",
+            "freq": "visit",
+            "scope": "visitor",
+            "str": 100,
+            "value": {
+              "cs": false,
+              "expr": "salesforce",
+              "type": "exact"
+            },
+            "parameter": "product"
+          },
+          {
+            "type": "BEH",
+            "freq": "always",
+            "scope": "visitor",
+            "str": 25
+          }
+        ]
+      },
+      {
+        "id": "cms-kontent",
+        "signals": [
+          {
+            "type": "QS",
+            "freq": "visit",
+            "scope": "visitor",
+            "str": -100,
+            "value": {
+              "cs": false,
+              "expr": "kontent",
+              "type": "exact"
+            },
+            "parameter": "product"
+          },
+          {
+            "type": "QS",
+            "freq": "visit",
+            "scope": "visitor",
+            "str": 100,
+            "value": {
+              "cs": false,
+              "expr": "kontent",
+              "type": "exact"
+            },
+            "parameter": "product"
+          },
+          {
+            "type": "BEH",
+            "freq": "always",
+            "scope": "visitor",
+            "str": 25
+          }
+        ]
+      }
+    ],
+    "enrichments": [],
+    "tests": []
+  }
+}

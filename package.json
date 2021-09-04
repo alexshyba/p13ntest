@@ -9,9 +9,7 @@
     "build": "run-s generate build:next",
     "build:next": "next build",
     "export": "next export",
-    "generate": "run-p generate:slug-page generate:intents",
-    "generate:intents": "uniform optimize manifest download --output ./lib/intentManifest.json --apiKey $UNIFORM_API_KEY",
-    "generate:slug-page": "node ./scripts/copySlugPage.js",
+    "generate": "echo 'intents are hardcoded'",
     "start": "next start -p 4120",
     "ci:build": "npm run generate && next build && next export",
     "ci:build:ssr": "cross-env NEXT_USE_SSR=1 run-s generate build"
